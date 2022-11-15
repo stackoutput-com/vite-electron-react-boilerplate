@@ -1,13 +1,52 @@
 {
   "name": "vite-electron-react-boilerplate",
   "version": "1.0.0",
+  "description": "Electron + Vitejs + React = Awesome❤️",
+  "keywords": [
+    "Electron",
+    "React",
+    "Vitejs",
+    "Typescript",
+    "JavaScript",
+    "Html",
+    "Css",
+    "Sass",
+    "Eslint",
+    "Prettier",
+    "Vite",
+    "HMR",
+    "Hot reload",
+    "Vscode debug"
+  ],
+  "homepage": "https://github.com/stackoutput-com/vite-electron-react-boilerplate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stackoutput-com/vite-electron-react-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stackoutput-com/vite-electron-react-boilerplate/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ajay Kanniyappan",
+    "email": "ajaykanniyappan@gmail.com",
+    "url": "https://ajaykanniyappan.com"
+  },
   "main": "dist-electron/main.js",
   "scripts": {
-    "build": "tsc && vite build",
-    "dev": "vite --config configs/vite.config.ts",
+    "build:debug": "",
+    "build": "tsc && cross-env NODE_ENV=production ELECTRON_ENV=production vite build --config configs/vite.config.ts",
+    "clean:build": "ts-node configs/clean.ts --build",
+    "clean:dist": "ts-node configs/clean.ts --dist",
+    "clean": "ts-node configs/clean.ts --clean",
     "lint": "eslint --fix .",
-    "preview": "vite preview",
-    "prepare": "husky install"
+    "make:linux": "npm run clean:build && npm run build && electron-builder build -l",
+    "make:mac": "npm run clean:build && npm run build && electron-builder build -m",
+    "make:win": "npm run clean:build && npm run build && electron-builder build -w",
+    "prepare": "husky install",
+    "prod:debug": "",
+    "prod": "npm run build && cd app && npm start",
+    "start": "cross-env NODE_ENV=development ELECTRON_ENV=debug vite --config configs/vite.config.ts"
   },
   "dependencies": {
     "electron-log": "^4.4.8",
@@ -23,6 +62,7 @@
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.42.1",
     "@vitejs/plugin-react": "^2.2.0",
+    "cross-env": "^7.0.3",
     "electron": "^21.2.3",
     "electron-builder": "^23.6.0",
     "electron-devtools-installer": "^3.2.0",

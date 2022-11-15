@@ -16,7 +16,7 @@ function getAssetsPath(fileName: string) {
   if (process.env.NODE_ENV === 'production' && app.isPackaged === false) {
     return path.resolve(__dirname, '../../../assets', fileName);
   }
-  return path.resolve(__dirname, '../../assets', fileName);
+  return path.resolve(__dirname, '../assets', fileName);
 }
 
 function getHtmlPath(htmlFileName: string) {
@@ -24,7 +24,7 @@ function getHtmlPath(htmlFileName: string) {
     const url = `http://localhost:${port}`;
     return url;
   }
-  return `file://${path.resolve(__dirname, `../renderer/${htmlFileName}`)}`;
+  return `file://${path.resolve(__dirname, `../dist/${htmlFileName}`)}`;
 }
 
 function getPreloadPath(Name: string) {

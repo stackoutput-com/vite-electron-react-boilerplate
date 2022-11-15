@@ -2,7 +2,7 @@
 import { app, BrowserWindow, ipcMain, Menu, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import Store from 'electron-store';
-import { isDebug, getAssetsPath, getPreloadPath, installExtensions } from './utils';
+import { isDebug, getAssetsPath, getHtmlPath, getPreloadPath, installExtensions } from './utils';
 import menu from './menu';
 import './updater';
 
@@ -13,12 +13,14 @@ function createWindow() {
     height: 750,
     webPreferences: {
       devTools: isDebug,
-      preload: getPreloadPath('preload.js'),
+      // preload: getPreloadPath('preload.js'),
       // nodeIntegration: true, // NODE.JS WILL AVAILABLE IN RENDERER
     },
   });
 
-  mainWindow.loadURL('http://localhost:7070');
+  mainWindow.loadURL(getHtmlPath('index.html'));
+
+  console.log(getAssetsPath('icon.ico'));
 
   /* MENU BUILDER */
   Menu.setApplicationMenu(menu);

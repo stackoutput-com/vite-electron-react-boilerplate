@@ -2,7 +2,7 @@ import bmc from '@Assets/bmc.png';
 import electronLogo from '@Assets/electron.png';
 import reactLogo from '@Assets/react.svg';
 import './Home.scss';
-import './Api';
+// import './Api';
 
 function Home() {
   return (
@@ -18,10 +18,10 @@ function Home() {
       </header>
       <section className="Content">
         <h1>Welcome to</h1>
-        <h2>React Electron Template!</h2>
+        <h2>Vite Electron React Boilerplate!</h2>
         <div className="Link">
           <a
-            href="https://github.com/AjayKanniyappan/react-electron-template#readme"
+            href="https://github.com/stackoutput-com/vite-electron-react-boilerplate#readme"
             target="_blank"
             rel="noopener noreferrer"
           >
