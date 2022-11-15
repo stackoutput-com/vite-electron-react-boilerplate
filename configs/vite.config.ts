@@ -5,6 +5,9 @@ import electron from 'vite-plugin-electron';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { port } from '../DevConfig.json';
 
+console.log(process.env.ELECTRON_ENV);
+console.log(process.env.NODE_ENV);
+
 export default defineConfig({
   plugins: [
     electron({

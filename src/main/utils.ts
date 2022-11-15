@@ -9,6 +9,9 @@ import { port } from '../../DevConfig.json';
 
 const isDebug = process.env.ELECTRON_ENV === 'debug';
 
+console.log(process.env.ELECTRON_ENV);
+console.log(process.env.NODE_ENV);
+
 function getAssetsPath(fileName: string) {
   if (process.env.NODE_ENV === 'production' && app.isPackaged === true) {
     return path.resolve(process.resourcesPath, 'assets', fileName);

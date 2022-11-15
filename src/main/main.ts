@@ -20,8 +20,6 @@ function createWindow() {
 
   mainWindow.loadURL(getHtmlPath('index.html'));
 
-  console.log(getAssetsPath('icon.ico'));
-
   /* MENU BUILDER */
   Menu.setApplicationMenu(menu);
 

@@ -10,6 +10,7 @@ switch (process.argv[2]) {
     break;
   case '--dist':
     rmSync('dist', { recursive: true, force: true });
+    rmSync('dist-electron', { recursive: true, force: true });
     break;
   case '--build':
     rmSync('release/build', { recursive: true, force: true });

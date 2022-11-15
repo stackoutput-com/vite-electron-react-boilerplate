@@ -3,8 +3,8 @@ import chalk from 'chalk';
 import detectPort from 'detect-port';
 import { port } from '../DevConfig.json';
 
-detectPort(parseInt(port, 10), (err: unknown, availablePort: unknown) => {
-  if (parseInt(port, 10) !== availablePort) {
+detectPort(port, (err: unknown, availablePort: unknown) => {
+  if (port !== availablePort) {
     // eslint-disable-next-line no-console
     console.log(
       `${chalk.whiteBright.bold('⚠️  localhost port')} ${chalk.red.bold(
