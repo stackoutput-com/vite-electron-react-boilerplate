@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "paths": {
+      "@Assets/*": ["./assets/*"],
+      "@Components/*": ["./src/renderer/Components/*"]
+    }
   },
-  "include": ["vite.config.ts"]
+  "include": ["assets", "configs", "src"],
+  "exclude": ["dist", "dist-electron"]
 }
