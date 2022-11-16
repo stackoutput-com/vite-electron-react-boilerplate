@@ -14,9 +14,9 @@ function getAssetsPath(fileName: string) {
     return path.resolve(process.resourcesPath, 'assets', fileName);
   }
   if (process.env.NODE_ENV === 'production' && app.isPackaged === false) {
-    return path.resolve(__dirname, '../assets', fileName);
+    return path.resolve(__dirname, '../../../assets', fileName);
   }
-  return path.resolve(__dirname, '../assets', fileName);
+  return path.resolve(__dirname, '../../assets', fileName);
 }
 
 function getHtmlPath(htmlFileName: string) {
@@ -24,12 +24,12 @@ function getHtmlPath(htmlFileName: string) {
     const url = `http://localhost:${port}`;
     return url;
   }
-  return `file://${path.resolve(__dirname, `../dist/${htmlFileName}`)}`;
+  return `file://${path.resolve(__dirname, `../renderer/${htmlFileName}`)}`;
 }
 
 function getPreloadPath(Name: string) {
   if (process.env.NODE_ENV === 'development') {
-    return path.resolve(__dirname, Name);
+    return path.resolve(__dirname, '../../dist/main', Name);
   }
   return path.resolve(__dirname, Name);
 }

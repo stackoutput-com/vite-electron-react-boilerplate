@@ -4,9 +4,6 @@ import reactLogo from '@Assets/react.svg';
 import './Home.scss';
 import './Api';
 
-console.log(process.env.ELECTRON_ENV);
-console.log(process.env.NODE_ENV);
-
 function Home() {
   return (
     <div>
@@ -21,10 +18,10 @@ function Home() {
       </header>
       <section className="Content">
         <h1>Welcome to</h1>
-        <h2>Vite Electron React Boilerplate!</h2>
+        <h2>React Electron Template!</h2>
         <div className="Link">
           <a
-            href="https://github.com/stackoutput-com/vite-electron-react-boilerplate#readme"
+            href="https://github.com/AjayKanniyappan/react-electron-template#readme"
             target="_blank"
             rel="noopener noreferrer"
           >
