@@ -6,6 +6,10 @@ import { isDebug, getAssetsPath, getHtmlPath, getPreloadPath, installExtensions 
 import menu from './menu';
 import './updater';
 
+console.log(getPreloadPath('preload.js'));
+console.log(process.env.ELECTRON_ENV);
+console.log(process.env.NODE_ENV);
+
 function createWindow() {
   const mainWindow = new BrowserWindow({
     icon: getAssetsPath('icon.ico'),
@@ -13,7 +17,7 @@ function createWindow() {
     height: 750,
     webPreferences: {
       devTools: isDebug,
-      // preload: getPreloadPath('preload.js'),
+      preload: getPreloadPath('preload.js'),
       // nodeIntegration: true, // NODE.JS WILL AVAILABLE IN RENDERER
     },
   });

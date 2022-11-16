@@ -9,15 +9,12 @@ import { port } from '../../DevConfig.json';
 
 const isDebug = process.env.ELECTRON_ENV === 'debug';
 
-console.log(process.env.ELECTRON_ENV);
-console.log(process.env.NODE_ENV);
-
 function getAssetsPath(fileName: string) {
   if (process.env.NODE_ENV === 'production' && app.isPackaged === true) {
     return path.resolve(process.resourcesPath, 'assets', fileName);
   }
   if (process.env.NODE_ENV === 'production' && app.isPackaged === false) {
-    return path.resolve(__dirname, '../../../assets', fileName);
+    return path.resolve(__dirname, '../assets', fileName);
   }
   return path.resolve(__dirname, '../assets', fileName);
 }
@@ -32,7 +29,7 @@ function getHtmlPath(htmlFileName: string) {
 
 function getPreloadPath(Name: string) {
   if (process.env.NODE_ENV === 'development') {
-    return path.resolve(__dirname, '../../app/dist/main', Name);
+    return path.resolve(__dirname, Name);
   }
   return path.resolve(__dirname, Name);
 }

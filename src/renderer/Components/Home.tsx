@@ -2,7 +2,10 @@ import bmc from '@Assets/bmc.png';
 import electronLogo from '@Assets/electron.png';
 import reactLogo from '@Assets/react.svg';
 import './Home.scss';
-// import './Api';
+import './Api';
+
+console.log(process.env.ELECTRON_ENV);
+console.log(process.env.NODE_ENV);
 
 function Home() {
   return (

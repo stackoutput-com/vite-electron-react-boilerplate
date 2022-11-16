@@ -34,19 +34,19 @@
   },
   "main": "dist-electron/main.js",
   "scripts": {
-    "build:debug": "npm run clean:build && npm run debug && electron-builder build",
+    "build:debug": "npm run clean:build && npm run debug && cross-env NODE_ENV=production ELECTRON_ENV=debug electron-builder build",
     "build": "npm run clean:dist && cross-env NODE_ENV=production ELECTRON_ENV=production vite build --config configs/vite.config.ts",
     "clean:build": "ts-node configs/clean.ts --build",
     "clean:dist": "ts-node configs/clean.ts --dist",
     "clean": "ts-node configs/clean.ts --clean",
-    "dev": "cross-env NODE_ENV=development ELECTRON_ENV=debug vite --config configs/vite.config.ts",
     "debug": "npm run clean:dist && cross-env NODE_ENV=production ELECTRON_ENV=debug vite build --config configs/vite.config.ts",
+    "dev": "cross-env NODE_ENV=development ELECTRON_ENV=debug vite --config configs/vite.config.ts",
     "lint": "eslint --fix .",
     "make:linux": "npm run clean:build && npm run build && electron-builder build -l",
     "make:mac": "npm run clean:build && npm run build && electron-builder build -m",
     "make:win": "npm run clean:build && npm run build && electron-builder build -w",
     "prepare": "husky install",
-    "prod:debug": "npm run debug && electron .",
+    "prod:debug": "npm run debug && cross-env NODE_ENV=production ELECTRON_ENV=debug electron .",
     "prod": "npm run build && electron .",
     "start": "ts-node configs/check-port.ts && npm run clean:dist && npm run dev"
   },
@@ -87,6 +87,7 @@
     "typescript": "^4.6.4",
     "vite": "^3.2.3",
     "vite-plugin-electron": "^0.10.4",
+    "vite-plugin-environment": "^1.1.3",
     "vite-tsconfig-paths": "^3.5.2"
   },
   "engines": {
