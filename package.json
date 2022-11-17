@@ -34,7 +34,7 @@
   },
   "main": "app/dist/main/main.js",
   "scripts": {
-    "build:debug": "npm run clean:build && npm run debug && cross-env NODE_ENV=production ELECTRON_ENV=debug electron-builder build",
+    "build:debug": "npm run clean:build && npm run debug && electron-builder build",
     "build": "npm run clean:dist && cross-env NODE_ENV=production ELECTRON_ENV=production vite build --config configs/vite.config.ts",
     "clean:build": "ts-node configs/clean.ts --build",
     "clean:dist": "ts-node configs/clean.ts --dist",
