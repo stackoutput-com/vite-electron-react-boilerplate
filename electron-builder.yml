@@ -4,16 +4,17 @@ copyright: 'Copyright © 2022 StackOutput'
 artifactName: '${productName}-${version}.${ext}'
 
 # Package electron code into a asar archive. Set to false to debug issues.
-asar: false
+asar: true
 
 files:
-  - 'dist'
-  - 'dist-electron'
+  - 'dist/'
+  - 'package.json'
 
 extraResources:
   - './assets/**'
 
 directories:
+  app: 'app'
   buildResources: 'assets'
   output: 'release/build'
 

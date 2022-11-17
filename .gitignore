@@ -2,9 +2,8 @@
 node_modules/
 
 # Temporary folders
-dist
-dist-electron
-release
+app/dist
+release/build
 
 # Temporary files
 package-lock.json
