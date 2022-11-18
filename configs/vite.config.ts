@@ -2,11 +2,15 @@
 import { builtinModules } from 'module';
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import chalk from 'chalk';
 import Electron from 'vite-plugin-electron';
 import EnvironmentPlugin from 'vite-plugin-environment';
 import React from '@vitejs/plugin-react';
 import TsConfigPaths from 'vite-tsconfig-paths';
 import { port } from '../DevConfig.json';
+
+// eslint-disable-next-line no-console
+console.log(`${chalk.whiteBright.bold(' ✨ Start')} ${chalk.green.bold('Hacking...👨‍💻')}`);
 
 export default defineConfig({
   base: './',

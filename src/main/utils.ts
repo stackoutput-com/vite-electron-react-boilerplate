@@ -16,7 +16,7 @@ function getAssetsPath(fileName: string) {
   if (process.env.NODE_ENV === 'production' && app.isPackaged === false) {
     return path.resolve(__dirname, '../../../assets', fileName);
   }
-  return path.resolve(__dirname, '../../assets', fileName);
+  return path.resolve(__dirname, '../../../assets', fileName);
 }
 
 function getHtmlPath(htmlFileName: string) {

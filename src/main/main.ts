@@ -13,8 +13,9 @@ function createWindow() {
     height: 750,
     webPreferences: {
       devTools: isDebug,
-      preload: getPreloadPath('preload.js'),
-      // nodeIntegration: true, // NODE.JS WILL AVAILABLE IN RENDERER
+      preload: getPreloadPath('preload.js'), // 👈 Don't USE PRELOAD.JS IF YOUR USING NODE IN RENDERER PROCESS
+      // nodeIntegration: true, // 👈 NODE.JS WILL AVAILABLE IN RENDERER
+      // contextIsolation: false, // 👈 ENABLE THIS FOR NODE INTEGRATION IN RENDERER
     },
   });
 
