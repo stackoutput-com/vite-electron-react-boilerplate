@@ -15,29 +15,27 @@ function Home() {
         <a href="https://www.electronjs.org/" target="_blank" rel="noopener noreferrer">
           <img className="App-Logo" src={electronLogo} alt="Electron Logo" />
         </a>
-        <p className="App-Plus">+</p>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img className="App-Logo" src={viteLogo} alt="Vite logo" />
+          <img className="Vite-Logo Vite" src={viteLogo} alt="Vite logo" />
         </a>
-        <p className="App-Plus">+</p>
         <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          <img className="App-Logo" src={reactLogo} alt="React Logo" />
+          <img className="App-Logo React" src={reactLogo} alt="React Logo" />
         </a>
       </header>
       <section className="Content">
         <h1>Welcome to</h1>
         <h2>Vite Electron React Boilerplate!</h2>
-        <div className="card">
-          <button type="button" onClick={() => setState((count) => count + 1)}>
+        <div className="state">
+          <button type="button" className="btn" onClick={() => setState((count) => count + 1)}>
             Count is {state}
           </button>
           <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
+            Edit <code>src/renderer/App.tsx</code> and save to test HMR🔥
           </p>
         </div>
         <div className="Link">
           <a
-            href="https://github.com/AjayKanniyappan/react-electron-template#readme"
+            href="https://github.com/stackoutput-com/vite-electron-react-boilerplate#readme"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -5,30 +5,42 @@
   font-size: calc(10px + 2vmin);
   justify-content: center;
 
-  .App-Plus {
-    position: absolute;
-    font-size: 2rem;
+  .Vite {
+    padding: 0rem;
   }
-}
 
-.App-Logo {
-  height: 7em;
-  padding: 1.5em;
-  will-change: filter;
-}
+  .Vite-Logo {
+    height: 5em;
+    margin-left: 10%;
+    padding: 1.5em;
+    transition: 0.75s;
+    will-change: filter;
+  }
 
-.App-Logo:hover {
-  filter: drop-shadow(0 0 2em #252a86aa);
-}
+  .Vite-Logo:hover {
+    filter: drop-shadow(0 0 2em #747bff);
+  }
 
-.App-Logo.React:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  .App-Logo {
+    height: 6em;
+    padding: 1.5em;
+    transition: 0.75s;
+    will-change: filter;
+  }
+
+  .App-Logo:hover {
+    filter: drop-shadow(0 0 2em #24c8db);
+  }
+
+  .App-Logo.React:hover {
+    filter: drop-shadow(0 0 2em #61dafb);
+  }
 }
 
 /* LOGO ROUTE */
 @media (prefers-reduced-motion: no-preference) {
   .App-Logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 
   @keyframes App-logo-spin {
@@ -46,8 +58,33 @@
   text-align: center;
 }
 
+.state {
+  padding: 0.5rem;
+}
+
 .Link {
-  padding: 1rem;
+  padding: 2rem;
+}
+
+.btn {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.6em 1.2em;
+  transition: border-color 0.25s;
+}
+
+.btn:hover {
+  border-color: #646cff;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .White-Button {
@@ -101,5 +138,5 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
