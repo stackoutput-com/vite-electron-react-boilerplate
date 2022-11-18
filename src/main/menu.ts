@@ -31,13 +31,15 @@ const template: (Electron.MenuItemConstructorOptions | Electron.MenuItem)[] = [
       {
         label: 'Learn More',
         click: () => {
-          shell.openExternal('https://github.com/AjayKanniyappan/react-electron-template');
+          shell.openExternal('https://github.com/stackoutput-com/vite-electron-react-boilerplate');
         },
       },
       {
         label: 'Documentation',
         click: () => {
-          shell.openExternal('https://github.com/AjayKanniyappan/react-electron-template#readme');
+          shell.openExternal(
+            'https://github.com/stackoutput-com/vite-electron-react-boilerplate#readme',
+          );
         },
       },
     ],

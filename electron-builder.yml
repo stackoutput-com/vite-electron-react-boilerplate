@@ -1,5 +1,5 @@
-productName: 'ReactElectron'
-appId: 'org.StackOutput.ReactElectron'
+productName: 'Electron Vite React'
+appId: 'org.StackOutput.ElectronVite'
 copyright: 'Copyright © 2022 StackOutput'
 artifactName: '${productName}-${version}.${ext}'
 
@@ -32,7 +32,7 @@ nsis:
   allowToChangeInstallationDirectory: false
   installerIcon: './assets/icon.ico'
   uninstallerIcon: './assets/icon.ico'
-  uninstallDisplayName: 'ReactElectron'
+  uninstallDisplayName: 'Electron Vite React'
   license: './LICENSE'
   # perMachine: true # Per Machine Configuration
 
@@ -88,5 +88,5 @@ linux:
 
 publish:
   provider: 'github'
-  owner: 'AjayKanniyappan'
-  repo: 'react-electron-template'
+  owner: 'stackoutput-com'
+  repo: 'vite-electron-react-boilerplate'
